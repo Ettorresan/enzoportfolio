@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drawing — Enzo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-motto-bar">
+      <span>Writer · Filmmaker · Artist · Game Designer</span>
+      <span>✦ ✦ ✦</span>
+      <span>Los Angeles · Rio de Janeiro · Italy · UK</span>
+    </div>
+    <div class="masthead-border"></div>
+    <a href="index.html" class="masthead-title-link">
+      <div class="masthead-title-row">
+        <span class="masthead-half">THE ENZO</span>
+        <div class="masthead-crest">
+          <img src="assets/coatarms.jpeg" alt="Coat of Arms" />
+        </div>
+        <span class="masthead-half">GAZETTE</span>
+      </div>
+    </a>
+    <div class="masthead-border"></div>
+    <div class="masthead-info-bar">
+      <span>Portfolio 2026</span>
+      <span>Senior Year</span>
+      <span>A Portfolio of Creative Works</span>
+      <span>Est. Los Angeles</span>
+    </div>
+    <div class="masthead-border thick"></div>
+    <nav class="broadsheet-nav">
+      <a href="index.html">Home</a>
+      <a href="writing.html">Writing</a>
+      <a href="drawing.html" class="nav-active">Drawing</a>
+      <a href="film.html">Film</a>
+      <a href="acting.html">Acting</a>
+      <a href="board-games.html">Games</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="masthead-border"></div>
+  </header>
+
+  <main class="broadsheet-main">
+
+    <div class="writing-page-header">
+      <div class="col-label">The Drawing Desk</div>
+      <h2 class="writing-page-title">Ink, Pencil &amp; Creatures</h2>
+      <p class="writing-page-sub">Ten works on paper — sea creatures, strange figures, and scenes from worlds that feel almost real.</p>
+    </div>
+
+    <div class="drawing-gallery">
+
+      <!-- HERO -->
+      <figure class="gallery-hero" onclick="openLightbox('assets/catinthesea.jpg', 'Cat in the Sea', 'Ink on paper · A cat stands in a rain-swept sea')">
+        <img src="assets/catinthesea.jpg" alt="Cat in the Sea" />
+        <figcaption>
+          <span class="gallery-title">Cat in the Sea</span>
+          <span class="gallery-meta">Ink on paper · A cat stands in a rain-swept sea</span>
+        </figcaption>
+      </figure>
+
+      <!-- SCENES & CHARACTERS CAROUSEL -->
+      <div class="section-rule">✦ Scenes &amp; Characters ✦</div>
+
+      <div class="carousel-wrap">
+        <button class="carousel-btn carousel-prev" onclick="carouselMove('scenes', -1)">‹</button>
+        <div class="carousel-track-wrap">
+          <div class="carousel-track" id="scenes">
+            <figure class="carousel-item" onclick="openLightbox('assets/cabininthewoods.jpg', 'Cabin in the Woods', 'Ink on paper · A small house deep in towering trees')">
+              <img src="assets/cabininthewoods.jpg" alt="Cabin in the Woods" />
+              <figcaption>
+                <span class="gallery-title">Cabin in the Woods</span>
+                <span class="gallery-meta">Ink on paper · Forest scene</span>
+              </figcaption>
+            </figure>
+            <figure class="carousel-item" onclick="openLightbox('assets/Masteratwork.jpg', 'Master at Work', 'Ink on paper · A creature feasts alone in a candlelit hall')">
+              <img src="assets/Masteratwork.jpg" alt="Master at Work" />
+              <figcaption>
+                <span class="gallery-title">Master at Work</span>
+                <span class="gallery-meta">Ink on paper · Candlelit feast</span>
+              </figcaption>
+            </figure>
+            <figure class="carousel-item" onclick="openLightbox('assets/Warriors.jpg', 'Warriors', 'Ink on paper · Knights and a watchful old man')">
+              <img src="assets/Warriors.jpg" alt="Warriors" />
+              <figcaption>
+                <span class="gallery-title">Warriors</span>
+                <span class="gallery-meta">Ink on paper · Knights</span>
+              </figcaption>
+            </figure>
+            <figure class="carousel-item" onclick="openLightbox('assets/violincat.jpg', 'Violin Cat', 'Ink on paper · A giant cat plays violin for a tiny audience')">
+              <img src="assets/violincat.jpg" alt="Violin Cat" />
+              <figcaption>
+                <span class="gallery-title">Violin Cat</span>
+                <span class="gallery-meta">Ink on paper</span>
+              </figcaption>
+            </figure>
+            <figure class="carousel-item" onclick="openLightbox('assets/HolyCarp.jpg', 'Holy Carp', 'Ink on paper · Fish-headed figure in a robe')">
+              <img src="assets/HolyCarp.jpg" alt="Holy Carp" />
+              <figcaption>
+                <span class="gallery-title">Holy Carp</span>
+                <span class="gallery-meta">Ink on paper</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-next" onclick="carouselMove('scenes', 1)">›</button>
+      </div>
+
+      <!-- SEA CREATURES CAROUSEL -->
+      <div class="section-rule">✦ Sea Creatures ✦</div>
+
+      <div class="carousel-wrap">
+        <button class="carousel-btn carousel-prev" onclick="carouselMove('sea', -1)">‹</button>
+        <div class="carousel-track-wrap">
+          <div class="carousel-track" id="sea">
+            <figure class="carousel-item" onclick="openLightbox('assets/octopus.jpg', 'Octopus', 'Ink on paper · Eight arms, one mood')">
+              <img src="assets/octopus.jpg" alt="Octopus" />
+              <figcaption>
+                <span class="gallery-title">Octopus</span>
+                <span class="gallery-meta">Ink on paper</span>
+              </figcaption>
+            </figure>
+            <figure class="carousel-item" onclick="openLightbox('assets/nautilus.jpg', 'Nautilus', 'Ink on paper · Highly detailed shell and body')">
+              <img src="assets/nautilus.jpg" alt="Nautilus" />
+              <figcaption>
+                <span class="gallery-title">Nautilus</span>
+                <span class="gallery-meta">Ink on paper · Detailed</span>
+              </figcaption>
+            </figure>
+            <figure class="carousel-item" onclick="openLightbox('assets/dotty.jpg', 'Sea Otter', 'Ink on paper · Spotted and resting')">
+              <img src="assets/dotty.jpg" alt="Sea Otter" />
+              <figcaption>
+                <span class="gallery-title">Sea Otter</span>
+                <span class="gallery-meta">Ink on paper</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-next" onclick="carouselMove('sea', 1)">›</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-inner" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption">
+        <span id="lightbox-title" class="gallery-title"></span>
+        <span id="lightbox-meta" class="gallery-meta"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="broadsheet-footer">
+    <div class="footer-rule"></div>
+    <p>The Enzo Gazette &nbsp;·&nbsp; Portfolio 2026–27 &nbsp;·&nbsp; © E.T. Torresan &nbsp;·&nbsp; All rights reserved</p>
+  </footer>
+
+  <script>
+    function openLightbox(src, title, meta) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-title').textContent = title;
+      document.getElementById('lightbox-meta').textContent = meta;
+      document.getElementById('lightbox').classList.add('lightbox-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('lightbox-open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    const carouselState = {};
+    function carouselMove(id, dir) {
+      const track = document.getElementById(id);
+      const items = track.querySelectorAll('.carousel-item');
+      if (!carouselState[id]) carouselState[id] = 0;
+      const visible = Math.floor(track.parentElement.offsetWidth / items[0].offsetWidth);
+      carouselState[id] = Math.max(0, Math.min(carouselState[id] + dir, items.length - visible));
+      track.style.transform = `translateX(-${carouselState[id] * items[0].offsetWidth}px)`;
+    }
+  </script>
+
+</body>
+</html>
