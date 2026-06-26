@@ -13,7 +13,7 @@
     <div class="masthead-motto-bar">
       <span>Writer · Filmmaker · Artist · Game Designer</span>
       <span>✦ ✦ ✦</span>
-      <span>Los Angeles · Rio de Janeiro · Italy · UK</span>
+      <span class="motto-cities">Los Angeles · Rio de Janeiro · Italy · UK</span>
     </div>
     <div class="masthead-border"></div>
     <a href="index.html" class="masthead-title-link">
@@ -27,13 +27,16 @@
     </a>
     <div class="masthead-border"></div>
     <div class="masthead-info-bar">
-      <span>Portfolio 2026</span>
-      <span>Senior Year</span>
+      
+      
       <span>A Portfolio of Creative Works</span>
       <span>Est. Los Angeles</span>
     </div>
     <div class="masthead-border thick"></div>
-    <nav class="broadsheet-nav">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="broadsheet-nav" id="main-nav">
       <a href="index.html">Home</a>
       <a href="writing.html">Writing</a>
       <a href="drawing.html" class="nav-active">Drawing</a>
@@ -192,5 +195,14 @@
     }
   </script>
 
+
+  <script>
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('main-nav');
+    btn.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
 </body>
 </html>

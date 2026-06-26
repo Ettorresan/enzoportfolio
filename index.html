@@ -14,7 +14,7 @@
     <div class="masthead-motto-bar">
       <span>Writer · Filmmaker · Artist · Game Designer</span>
       <span>✦ ✦ ✦</span>
-      <span>Los Angeles · Rio de Janeiro · Italy · UK</span>
+      <span class="motto-cities">Los Angeles · Rio de Janeiro · Italy · UK</span>
     </div>
 
     <div class="masthead-border"></div>
@@ -32,15 +32,16 @@
     <div class="masthead-border"></div>
 
     <div class="masthead-info-bar">
-      <span>Portfolio 2026</span>
-      <span>Senior Year</span>
       <span>A Portfolio of Creative Works</span>
       <span>Est. Los Angeles</span>
     </div>
 
     <div class="masthead-border thick"></div>
 
-    <nav class="broadsheet-nav">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="broadsheet-nav" id="main-nav">
       <a href="index.html" class="nav-active">Home</a>
       <a href="writing.html">Writing</a>
       <a href="drawing.html">Drawing</a>
@@ -58,11 +59,12 @@
 
       <article class="col-wide hero-article">
         <h2 class="article-headline">A Writer Who Builds Worlds, Draws Creatures, and Plays by His Own Rules</h2>
-        <div class="article-byline">By Enzo &nbsp;|&nbsp; Senior Year</div>
+        <div class="article-byline">By E.T. Torresan</div>
+        <img src="assets/tophat-tempimage.jpg" alt="Top Hat" class="hero-tophat-mobile" />
         <div class="article-body">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
           <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-          <a href="writing.html" class="read-more">Continue reading →</a>
+          <a href="about.html" class="read-more">Continue reading →</a>
         </div>
       </article>
 
@@ -132,6 +134,7 @@
     <div class="club-strip">
       <div class="club-text">
         <span class="handwritten large">Creative Writing &amp; Roleplay Club</span>
+        <img src="assets/2026club.jpg" alt="Club session at Providence High School" class="club-img-mobile" />
         <p>12 members sophomore year. 30 junior year. A room where stories get made together.</p>
         <a href="about.html#club" class="col-link" style="display:inline-block; margin-top:0.5rem;">Learn more about the club →</a>
       </div>
@@ -145,5 +148,14 @@
     <p>The Enzo Gazette &nbsp;·&nbsp; Portfolio 2026–27 &nbsp;·&nbsp; © E.T. Torresan &nbsp;·&nbsp; All rights reserved</p>
   </footer>
 
+
+  <script>
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('main-nav');
+    btn.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
 </body>
 </html>

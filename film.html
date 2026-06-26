@@ -14,7 +14,7 @@
     <div class="masthead-motto-bar">
       <span>Writer · Filmmaker · Artist · Game Designer</span>
       <span>✦ ✦ ✦</span>
-      <span>Los Angeles · Rio de Janeiro · Italy · UK</span>
+      <span class="motto-cities">Los Angeles · Rio de Janeiro · Italy · UK</span>
     </div>
 
     <div class="masthead-border"></div>
@@ -32,15 +32,18 @@
     <div class="masthead-border"></div>
 
     <div class="masthead-info-bar">
-      <span>Portfolio 2026</span>
-      <span>Senior Year</span>
+      
+      
       <span>A Portfolio of Creative Works</span>
       <span>Est. Los Angeles</span>
     </div>
 
     <div class="masthead-border thick"></div>
 
-    <nav class="broadsheet-nav">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="broadsheet-nav" id="main-nav">
       <a href="index.html">Home</a>
       <a href="writing.html">Writing</a>
       <a href="drawing.html">Drawing</a>
@@ -58,6 +61,21 @@
       <div class="col-label">The Film Desk</div>
       <h2 class="writing-page-title">Documentary &amp; Short Films</h2>
       <p class="writing-page-sub">The best films produced during his high school years — shot, edited, and scored in Los Angeles.</p>
+    </div>
+
+    <div class="writing-sidebar-mobile">
+      <figure class="film-sidebar-photo" style="margin:0 0 0.5rem;">
+        <img src="assets/EnzoFilming.jpg" alt="Enzo on set" style="width:100%;" />
+        <figcaption class="handwritten" style="font-size:0.95rem; color:var(--ink-faint); display:block; text-align:center; margin-top:0.4rem;">Vidiots shooting</figcaption>
+      </figure>
+      <div class="sidebar-note">
+        <span class="handwritten">In this section:</span>
+        <ul>
+          <li><a href="#vidiots">Vidiots</a></li>
+          <li><a href="#comedy-film">Short Comedy [TBA]</a></li>
+          <li><a href="#cinema-arts-application">Cinema Arts Short</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="broadsheet-grid film-grid">
@@ -164,5 +182,14 @@
     <p>The Enzo Gazette &nbsp;·&nbsp; Portfolio 2026–27 &nbsp;·&nbsp; © E.T. Torresan &nbsp;·&nbsp; All rights reserved</p>
   </footer>
 
+
+  <script>
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('main-nav');
+    btn.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
 </body>
 </html>
